@@ -1,0 +1,125 @@
+.inviteWrap {
+    width: 100%;
+
+    .info_1 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+
+        ul {
+            width: 100%;
+            height: auto;
+            background: $mainBG_1;
+            
+            li {
+                width: 100%;
+                height: 50px;
+                padding: 0px 17px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: solid 1px $mainBorder_1;
+
+                &.forQR {
+                    height: auto;
+                    padding: 0 17px;
+
+                    span {
+
+                        &:nth-of-type(1) {
+                            width: auto;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $title_2;
+
+                    &.empty {
+                        color: $remind;
+                    }
+
+                    &:nth-of-type(1) {
+                        width: 20vw;
+                    }
+
+                    input {
+                        background: none;
+                        border: none;
+                    }
+
+                    .copy {
+                        width: 47px;
+                        height: 29px;
+                        @include noBgBtn_Normal;
+                        margin-left: 15px;
+                    }
+
+                    .check,.noCheck {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        margin-right: 10px;
+                    }
+
+                    .changePhoneBtn,.changePwdBtn {
+                        background: none;
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $optionColor;
+                        margin-left: 10px;
+
+                        i {
+                            display: block;
+                            width: 2vw;
+                            height: 3.4vw;
+                            transform: scaleX(-1);
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                .qrCode {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .security {
+                    width: 100%;
+                    height: 40px;
+                    @include wordBox;
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .dividend_img {
+        height: calc(110vw);
+        margin: 4%;
+    }
+
+    .devidend_box {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 3%;
+        margin-bottom: 45px;
+
+        .title {
+            color: $title_1;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: $optionColor;
+        }
+    }
+}

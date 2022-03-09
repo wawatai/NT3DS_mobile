@@ -1,0 +1,682 @@
+//主色系
+$mainBG_1: #ffffff;
+$mainBG_2: #f8f8f8;
+
+//主要字色
+$mainWord_1: #000000;
+
+//主要邊框色
+$mainBorder_1: #cccccc;
+$mainBorder_2: #b18e56;
+
+//金額色
+$money: #000000;
+$money_Sp: #e11515;
+
+//可選字色
+$click: #af8c50;
+
+//小提示字色
+$remind: #e11515;
+$remind_Sp: #009245;
+
+//大選項字色
+$optionColor: #4d4d4d;
+
+//標題字
+$title_1: #c0933e;
+$title_2: #444;
+$title_3: #666;
+$title_Time: #999;
+$title_Header: #ffffff;
+
+//選擇列字色+選擇列active
+$choose_Word: #848484;
+$choose_ActiveWord: #231815;
+$choose_Border: #c7a16e;
+
+//陰影色
+$boxshadow_1: #dedede;
+$boxshadow_2: #c8c8c880;
+
+//跑馬燈字色
+$marqueeColor: #4d4d4d;
+//跑馬燈背景
+$marqueeIcon: linear-gradient(to top,#fae0af 0%,#d7b676 50%,#f8fbc0 100%);
+//跑馬燈陰影色
+$marqueeBoxshadow: #ede5d7;
+
+//彈窗背景透明底
+$filter: #00000066;
+
+//提示框
+@mixin remindBox {
+    background: #fcf9f3;
+    border: 1px solid #ece0d2;
+    border-radius: 3px;
+    padding: 14px 15px;
+    box-sizing: border-box;
+}
+
+//箭頭小提示
+@mixin smallTip {
+    background: #cca172;
+    padding: 6px 18px;
+    color: #ffffff;
+    border-radius: 3px;
+    font-size: 3vw;
+    position: relative;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -6px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 4px 6px 4px;
+        border-color: #cca172 transparent;
+    }
+
+    em {
+        color: #ffff00;
+    }
+}
+
+
+//頁面個別調整
+
+
+//登入頁登入區塊
+$operate_Acc: #000000;
+$operate_Money: #000000;
+@mixin operateLV {
+    background: linear-gradient(120deg,#f1d7b7 0%,#cca172 50%,#f1c999 100%);
+    border: solid 1px #cca172;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+@mixin operateBtn {
+    background: linear-gradient(to top,#943c06 0%,#ffd1af 100%);
+    box-shadow: inset 0 2px 1px 0 #d3a047,
+    inset 0 -2px 0 0 #dfb988,
+    inset -2px -1px 0 0 #ffecbd,
+    0 -2px 0 0 #ffebba,
+    0 1px 0 0 #d3a047,
+    2px 2px 2px 0 #bbbbbb;
+    color: #ffffff;
+    padding: 0 1px 3px 0;
+    font-size: 21px;
+    border-radius: 50%;
+    font-weight: bold;
+    box-sizing: border-box;
+    
+}
+
+//主頁面按鈕
+$gameListBtn_Border: #b7a25f;
+$gameListBtn_Word: #4d4d4d;
+$gameListBtn_ActiveWord: #ffffff;
+$gameListBtn_ActiveBG: linear-gradient(to top,#e9cc93 0%,#be9c5b 100%);
+@mixin gameListBG {
+    background: linear-gradient(to top,#ffffff 36%,#f5f5f5 100%);
+    border: solid 1px #b69761;
+    box-shadow: inset 1px 1px 3px 0 #ffffff,
+    inset -2px -2px 3px 0 #5a5a5a80;
+    border-radius: 5px;
+}
+@mixin gameBoxWord {
+    color: #ebd495;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 3px 3px #332116, 2px -2px 3px #332116;
+}
+
+//member
+@mixin memberWallet {
+    background: #f2f3f3;
+    color: #000;
+    border-color: #957222;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 16px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-radius: 5vw 0 0 5vw;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+@mixin mailBubble {
+    background: #e11515;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 0 2px 2px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+}
+@mixin wordBox {
+    background: #fffcf5;
+    border: solid 1px #ffe5cd;
+    color: #4d4d4d;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-weight: bold;
+
+    .low {
+        color: #ff0000;
+    }
+
+    .middle {
+        color: #ff8600;
+    }
+
+    .high {
+        color: #009245;
+    }
+}
+
+//vip
+$vip_LevelBar: #e0e0e0;
+$vip_LevelCur: #d3b47b;
+$vip_LevelBG: #cccccc;
+$vip_LevelLinear: linear-gradient(to bottom,#f7eeba 0%,#bf9d5f 50%,#eed6af 100%);
+$vip_Word: #ffffff;
+@mixin vipCardText {
+    color: #ffffff;
+    text-shadow: 1px 2px 3px #000000;
+}
+$vipDetail_SecondBG: #f7ede1;
+
+//eventApply
+$currentBG: #ece2ca;
+
+//pointWindow
+$point_BG: #e8cb8e;
+$point_Border: #957222;
+
+//card
+$cardLinear: linear-gradient(120deg,#f1d7b7 0%,#cca172 50%,#f1c999 100%);
+$cardLinear_Empty: linear-gradient(120deg,#e8ebf2 0%,#cbcdd3 30%);
+$cardWord: #ffffff;
+@mixin cardStatus {
+    background: #ffffff;
+    color: #ad8047;
+    font-size: 12px;
+    opacity: 0;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+//綁定銀行卡特殊字色
+$card_upload:#3d4cce;
+$card_line:#3502ff;
+
+//mail
+$mailCnt_TopBG: #e0c38d;
+@mixin mailWrap {
+    background: #ffffff;
+    border: solid 1px #957222;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 2px 5px 0 #c3c3c3;
+
+    &.read {
+        background: #f2f3f3;
+
+        .title {
+            color: #b3b3b3;
+        }
+
+        .textBox {
+
+            p,.date {
+                color: #b3b3b3;
+            }
+        }
+    }
+}
+@mixin checkBox {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        border: solid 1px #957222;
+        background: #ffffff;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+    }
+
+    &:checked {
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #957222;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+//help
+$help_Title: #171717;
+$help_Word: #4d4d4d;
+//客服按鈕
+@mixin help_lineBtn {
+    background: #ffffff;
+    border: solid 1px #00b900;
+    box-shadow: 3px 3px 3px 0 #c5c5c5;
+    display: flex;
+    box-sizing: border-box;
+    padding: 25px 15px 25px 18vw;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        color: #00b900;
+    }
+}
+
+//slotPage
+$slotGame_Word: #4d4d4d;
+@mixin slotSearch {
+    background: #f2f3f3;
+    border: solid 1px #cccccc;
+    padding: 4px 10px 4px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+@mixin slotSearch_Input {
+    background: none;
+    border: none;
+    color: #000000;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: #848484;
+    }
+}
+@mixin slotGameBox {
+    background: linear-gradient(to bottom,#fcfcfc 67%,#d8d8d8 100%);
+    border: solid 1px #b3b3b3;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    font-size: 0;
+    box-sizing: border-box;
+}
+@mixin slotGameBtn_1 {
+    background: linear-gradient(to top, #8c1212 0%, #ff4a4a 100%);
+    border: solid 1px #dc0000;
+    border-radius: 3px;
+    font-size: 3vw;
+    color: #ffffff;
+    font-weight: bold;
+
+    &:active,&.active {
+        background: linear-gradient(to bottom, #8c1212 0%, #ff4a4a 100%);
+    }
+}
+@mixin slotGameBtn_2 {
+    background: linear-gradient(to top, #384c79 0%, #2b87e6 100%);
+    border: solid 1px #0f4eb7;
+    border-radius: 3px;
+    font-size: 3vw;
+    color: #ffffff;
+    font-weight: bold;
+
+    &:active,&.active {
+        background: linear-gradient(to bottom, #384c79 0%, #2b87e6 100%);
+    }
+}
+
+//footer
+@mixin footerBG {
+    background: linear-gradient(0deg,#d7d7d7 0,#ffffff 76%);
+    box-shadow: 0 0 8px 0 #dedede;
+    display: flex;
+    align-items: center;
+}
+@mixin footerWord {
+    color: #848484;
+    border-right: solid 1px #dcdddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        color: #704a1a;
+    }
+}
+
+//deposit
+@mixin depositBtn {
+    background: linear-gradient(to bottom,#ffffff 40%,#f4f4f4 100%);
+    border: solid 1px #957222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+
+    &.active {
+        border-color: #c7a76d;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translate(50%,50%) rotate(45deg);
+            background: #c7a76d;
+            width: 8vw;
+            height: 8vw;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0.5vw;
+            bottom: 0.5vw;
+            width: 2.5vw;
+            height: 2.5vw;
+        }
+    }
+}
+
+
+//button
+
+
+//無背景按鈕常用類
+@mixin noBgBtn_Normal {
+    background: #ffffff;
+    border: solid 1px #a7854d;
+    font-size: 13px;
+    font-weight: bold;
+    color: #a7854d;
+    border-radius: 3px;
+}
+//無背景帶顏色按鈕
+@mixin noBgBtn_Color1 {
+    background: #ffffff;
+    border: solid 1px #4cb816;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4cb816;
+    border-radius: 3px;
+    padding: 0 5px;
+    letter-spacing: 1px;
+}
+@mixin noBgBtn_Color2 {
+    background: #ffffff;
+    border: solid 1px #e11515;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e11515;
+    border-radius: 3px;
+    padding: 0 5px;
+    letter-spacing: 1px;
+}
+
+//header列按鈕
+@mixin headerBtn {
+    background: linear-gradient(to bottom,#ffffff 0%,#e6e6e6 100%);
+    border: solid 1px #bda16e;
+    font-size: 13px;
+    font-weight: bold;
+    color: #a9894e;
+    border-radius: 3px;
+    padding: 0 8px;
+}
+
+//長選項按鈕
+@mixin longBtn {
+    border: 1px solid #957222;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 #969696;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px 0 23px;
+    box-sizing: border-box;
+
+    p {
+        display: flex;
+        align-items: center;
+        font-size: 3.4vw;
+        font-weight: bold;
+        color: #8a6a3a;
+        letter-spacing: 2px;
+    }
+
+    &:active,&.active {
+        border-color: #fff;
+        background: #957222;
+
+        p {
+            color: #ffffff;
+        }
+    }
+}
+
+//常用橘色漸層
+@mixin mainBtn {
+    background: linear-gradient(to top,#d8be86 0%,#f0e4ad 92%);
+    border: solid 1px #957222;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #7c5625;
+    border-radius: 3px;
+    letter-spacing: 1px;
+
+    &:active,&.active {
+        background: linear-gradient(to top,#e8cb8e 0,#a17d44 100%);
+        color: #ffffff;
+    }
+}
+
+//灰漸層底+灰漸層active
+@mixin normalBtn {
+    background: linear-gradient(to bottom,#ffffff 40%,#f4f4f4 100%);
+    border: solid 1px #957222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: bold;
+
+    &:active,&.active {
+        background: linear-gradient(to top,#ffffff 40%,#f4f4f4 100%);
+    }
+}
+//灰漸層底+橘色漸層active
+@mixin changeBtn {
+    background: linear-gradient(to top,#d7d7d7 0%,#ffffff 58%,#ffffff 100%);
+    font-size: 4vw;
+    color: #848484;
+    border: solid 1px #957222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+
+    &:active,&.active {
+        background: linear-gradient(to top,#dfc88b 0%,#b79451 100%);
+        color: #ffffff;
+    }
+}
+
+//event查看活動按鈕
+@mixin checkEvent {
+    background: linear-gradient(to top,#f3dba7 0%,#a88754 50%,#f0d8a4 100%);
+    border: solid 1px #957222;
+    border-radius: 1vw;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+
+    &:active,&.active {
+        background: linear-gradient(to top,#f3dba7 0%,#a08761 100%);
+    }
+}
+
+//大灰切換按鈕
+@mixin bigGrayBtn {
+    background: linear-gradient(to bottom, #ffffff 0%, #dadada 100%);
+    border: solid 1px #cccccc;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 3.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:active,&.active {
+        border-color: #957222;
+        color: #ffffff;
+        background: linear-gradient(to top,#dfc88b 0%,#b79451 100%);
+    }
+}
+
+//假select樣式按鈕
+@mixin fakeSelect {
+    background: #ffffff;
+    border-radius: 3px;
+    border: solid 1px #957222;
+    color: #000000;
+    font-size: 16px;
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+
+    i {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #957222 transparent;
+    }
+}
+
+button:disabled {
+    background: #cccccc !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    pointer-events: none;
+}
+
+
+//input
+
+
+//常用input
+@mixin mainInput {
+    background: none;
+    border: solid 1px #957222;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 3px;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: #848484;
+    }
+}
+//member頁用input
+@mixin memberInput {
+    text-align: right;
+    border: solid 1px transparent;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: #000000;
+
+    &::placeholder {
+        color: #848484;
+    }
+
+    &.active {
+        background: #ffffff;
+        border-color: #957222;
+        padding-right: 8px;
+        border-radius: 5px;
+    }
+}
+
+
+//select
+
+
+@mixin mainSelect {
+    background-color: #ffffff;
+    border-radius: 3px;
+    appearance: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    background-image: linear-gradient(45deg,transparent 50%,#957222 0),linear-gradient(135deg,#957222 50%,transparent 0);
+    background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px,5px 5px;
+    background-repeat: no-repeat;
+    border: solid 1px #957222;
+    padding-left: 15px;
+}

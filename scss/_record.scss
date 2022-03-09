@@ -1,0 +1,351 @@
+//投注紀錄
+.bettingWrap {
+    width: 100%;
+    height: calc(100vh - 95px);
+    background: $mainBG_2;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    .searchContent {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 13px 14px;
+        background: $mainBG_1;
+        margin-bottom: 10px;
+
+        .top {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            .helf {
+                width: 50%;
+
+                p {
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: $title_2;
+                }
+    
+                button {
+                    width: 44vw;
+                    height: 42px;
+                    @include fakeSelect;
+                }
+            }
+
+            .full {
+                width: 100%;
+
+                p {
+                    margin: 10px 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: $title_2;
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: 42px;
+                    border: solid 1px $mainBorder_2;
+                    border-radius: 3px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    color: $mainWord_1;
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    input {
+                        width: auto;
+                        height: 100%;
+                        border: none;
+                        background: none;
+                        color: $mainWord_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                }
+
+                .selectBox {
+                    width: 100%;
+                    height: auto;
+
+                    select {
+                        width: 100%;
+                        height: 42px;
+                        @include mainSelect;
+                    }
+                }
+            }
+        }
+
+        .date {
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin: 20px 0;
+
+            button {
+                width: 25%;
+                height: 38px;
+                @include changeBtn;
+
+                &:nth-of-type(1) {
+                    border-radius: 5px 0 0 5px;
+                }
+            
+                &:last-child {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+
+        .check {
+            width: 100%;
+            height: 42px;
+            @include mainBtn;
+        }
+    }
+
+    .list {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px 14px;
+
+        .noData {
+            display: none;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 80px;
+            color: $title_3;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+
+            &.display {
+                display: block;
+            }
+        }
+
+        .recordBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: solid 1px $mainBorder_2;
+            background: $mainBG_1;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 38px;
+                border-bottom: solid 1px $mainBorder_1;
+                color: $title_1;
+                font-size: 14px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 0 18px;
+                
+                .date {
+                    font-size: 13px;
+                    color: $title_Time;
+                }
+
+                button {
+                    width: 80px;
+                    height: 26px;
+                    @include noBgBtn_Normal;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 0 18px;
+
+                li {
+                    width: 100%;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: $title_2;
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    p {
+                        font-size: 13px;
+
+                        &.num {
+                            color: $mainWord_1;
+    
+                            &.win {
+                                color: $remind;
+                            }
+    
+                            &.lose {
+                                color: $remind_Sp;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //交易紀錄用
+    &.deal {
+        padding: 0;
+    }
+}
+
+//交易紀錄上選項
+.recordTop {
+    width: 100%;
+    height: auto;
+    background: $mainBG_1;
+    margin-bottom: 10px;
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+
+        li {
+            width: 50%;
+            height: 40px;
+            box-sizing: border-box;
+            border-bottom: solid 2px transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: $choose_Word;
+
+            &.active {
+                color: $choose_ActiveWord;
+                border-color: $choose_Border;
+            }
+        }
+    }
+}
+
+.waterBox {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 15px 4vw;
+
+    .noData {
+        display: none;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 80px;
+        color: $title_3;
+        font-weight: bold;
+        text-align: center;
+        font-size: 14px;
+
+        &.display {
+            display: block;
+        }
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+
+        li {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            background: $mainBG_1;
+            border: solid 1px $mainBorder_2;
+            margin-bottom: 10px;
+
+            p {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 0 14px;
+                font-weight: bold;
+                font-size: 14px;
+
+                &.title {
+                    color: $title_1;
+                    border-bottom: solid 1px $mainBorder_1;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    &:nth-of-type(1) {
+                        color: $title_2;
+                    }
+
+                    &:last-child {
+                        color: $mainWord_1;
+                    }
+
+                    &.sp {
+                        color: $remind_Sp;
+                    }
+                }
+            }
+
+            .remindBox {
+                width: calc(100% - 28px);
+                height: 42px;
+                @include wordBox;
+                margin: 0 auto;
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                margin: 20px 0;
+                box-sizing: border-box;
+                padding: 0 14px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    width: 48%;
+                    height: 38px;
+
+                    &:nth-of-type(1) {
+                        @include noBgBtn_Normal;
+                        font-size: 14px;
+                    }
+
+                    &:last-child {
+                        @include mainBtn;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

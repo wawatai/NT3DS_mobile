@@ -1,0 +1,400 @@
+//轉帳
+.transWrap {
+    width: 100%;
+    height: calc(100vh - 95px);
+    overflow-y: auto;
+    background: $mainBG_2;
+    box-sizing: border-box;
+    padding: 10px 0;
+
+    .wallet {
+        width: 92vw;
+        height: auto;
+        box-sizing: border-box;
+        padding: 12px 15px 10px;
+        border-radius: 5px;
+        background: $mainBG_1;
+        box-shadow: 0 0 5px 0 $boxshadow_2;
+        margin: 0 auto 10px;
+        display: flex;
+        border: solid 1px $mainBorder_2;
+
+        .helf {
+            width: 100%;
+            height: 65px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .title {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                color: $title_1;
+
+                i {
+                    width: 4.27vw;
+                    height: 4.27vw;
+                    margin-left: 6px;
+                }
+                
+                button {
+                    width: 18.93vw;
+                    height: 6.13vw;
+                    @include mainBtn;
+                    font-size: 12px;
+                    margin-left: 20px;
+                }
+            }
+
+            .amount {
+                font-size: 29px;
+                color: $money;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .transBox {
+        width: 100%;
+        height: auto;
+        background: $mainBG_1;
+        padding: 10px 14px;
+        box-sizing: border-box;
+
+        .selectBox {
+            width: auto;
+            height: auto;
+            position: relative;
+            margin-bottom: 12px;
+
+            select {
+                width: 100%;
+                height: 42px;
+                @include mainSelect;
+                padding-left: 12vw;
+                font-size: 14px;
+            }
+
+            .smallWord {
+                color: $title_1;
+                font-size: 12px;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 4vw;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 42px;
+            margin-bottom: 12px;
+            @include mainInput;
+        }
+
+        // .btnBox {
+        //     width: 100%;
+        //     height: auto;
+        //     margin: 12px 0;
+        //     display: flex;
+        //     justify-content: space-around;
+
+        //     button {
+        //         width: 45%;
+        //         height: 42px;
+        //         @include buttonStyle_2;
+        //     }
+        // }
+
+        .check {
+            width: 100%;
+            height: 42px;
+            @include mainBtn;
+        }
+    }
+
+    // .subClass {
+    //     width: 100%;
+    //     height: auto;
+    //     box-sizing: border-box;
+    //     padding: 10px 15px;
+    //     background: $backgroundColor_4;
+
+    //     ul {
+    //         width: 100%;
+    //         height: auto;
+    //         display: flex;
+    //         overflow: hidden;
+    //         border-radius: 5px;
+
+    //         li {
+    //             width: 50%;
+    //             height: 42px;
+    //             @include buttonStyle_6;
+    //         }
+    //     }
+    // }
+
+    // .forActive {
+    //     padding-bottom: 15px;
+    //     display: none;
+
+    //     &.display {
+    //         display: block;
+    //     }
+
+    //     .title {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: space-between;
+    //         width: 100%;
+    //         height: auto;
+    //         box-sizing: border-box;
+    //         padding: 8px 15px 0;
+    //         margin-bottom: 11px;
+    //         font-size: 13px;
+    //         letter-spacing: 1px;
+    //         color: $font-color_4;
+    //         font-weight: bold;
+
+    //         .refresh_ic {
+    //             display: block;
+    //             width: 18px;
+    //             height: 18px;
+    //         }
+    //     }
+
+    //     .pointBox {
+    //         width: 92.27vw;
+    //         height: auto;
+    //         padding-bottom: 30px;
+    //         margin: 0 auto 14px;
+    //         background: $backgroundColor_2;
+    //         box-shadow: 0 0 5px 0 $boxshadow_2;
+
+    //         .smallTitle {
+    //             display: flex;
+    //             align-items: center;
+    //             box-sizing: border-box;
+    //             height: 40px;
+    //             border-bottom: solid 1px $borderColor_3;
+    //             font-size: 14px;
+    //             font-weight: bold;
+    //             color: $font-color_12;
+    //             padding: 0 17px;
+    //         }
+
+    //         .barBox {
+    //             width: 88vw;
+    //             height: auto;
+    //             box-sizing: border-box;
+    //             padding: 10px 20px 15px;
+    //             background: $backgroundColor_8;
+    //             border-radius: 3px;
+    //             margin: 10px auto 0;
+    //             display: flex;
+    //             flex-direction: column;
+
+    //             .not {
+    //                 font-size: 12px;
+    //                 font-weight: bold;
+    //                 letter-spacing: 1px;
+    //                 color: $font-color_2;
+    //             }
+    //         }
+
+    //         ul {
+    //             width: 100%;
+    //             height: auto;
+
+    //             li {
+    //                 width: 100%;
+    //                 height: auto;
+    //                 box-sizing: border-box;
+    //                 padding: 12px 0 0 16px;
+    //                 display: flex;
+                    
+    //                 p {
+    //                     font-size: 13px;
+    //                     letter-spacing: 1px;
+    //                     color: $font-color_8;
+    //                     font-weight: bold;
+
+    //                     &:nth-of-type(1) {
+    //                         margin-right: 20px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+
+    //         .pointBtnBox {
+    //             display: flex;
+    //             justify-content: space-between;
+    //             box-sizing: border-box;
+    //             width: 100%;
+    //             height: auto;
+    //             padding: 20px 14px 10px;
+
+    //             button {
+    //                 width: 41.33vw;
+    //                 height: 8.27vw;
+    //                 @include buttonStyle_2;
+    //                 font-size: 13px;
+                    
+    //                 &.check {
+    //                     @include buttonStyle_3;
+    //                     font-size: 13px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    .forPlatform {
+        padding-bottom: 15px;
+        display: none;
+        background: $mainBG_1;
+        margin-top: 10px;
+
+        &.display {
+            display: block;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 8px 15px 0;
+            margin-bottom: 11px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: $title_Time;
+            font-weight: bold;
+
+            // button {
+            //     width: 18.93vw;
+            //     height: 6.13vw;
+            //     @include buttonStyle_2;
+            //     font-size: 12px;
+            // }
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+            max-height: 67.16vw;
+            padding: 0 3.6vw;
+            overflow: hidden;
+
+            &.active {
+                max-height: none;
+            }
+
+            li {
+                width: 29.66vw;
+                min-height: 16.53vw;
+                box-sizing: border-box;
+                padding: 10px 0 0 11px;
+                margin: 0 0.26vw 0.26vw 0;
+                border: solid 1px $mainBorder_2;
+                border-radius: 1.5vw;
+                margin: 0 1.9vw 12px 0;
+
+                &:nth-of-type(3n) {
+                    margin-right: 0;
+                }
+
+                div {
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    color: $title_2;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+
+                    .smallInfo {
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        margin-left: 5px;
+                        position: relative;
+                        opacity: 0;
+                        pointer-events: none;
+
+                        &.display {
+                            opacity: 1;
+                            pointer-events: visible;
+                        }
+
+                        &:hover,&:active,&.active {
+
+                            .inner {
+                                display: block;
+                            }
+                        }
+
+                        .inner {
+                            display: none;
+                            width: auto;
+                            height: auto;
+                            @include smallTip;
+                            padding: 6px 18px;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -30px;
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-size: 17px;
+                    color: $money;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .openBtn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: auto;
+            margin-top: 15px;
+
+            div {
+                font-size: 13px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                color: $optionColor;
+                display: flex;
+                align-items: center;
+
+                &.active {
+
+                    .db_arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .db_arrow {
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    margin-left: 9px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
